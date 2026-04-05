@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BHUWAN KHATRI | Personal Website</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+line-height:1.6;
+}
+
+header{
+background:#020617;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+header h1{
+color:#38bdf8;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+section{
+padding:70px 10%;
+}
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.hero-text{
+max-width:600px;
+}
+
+.hero h2{
+font-size:40px;
+color:#38bdf8;
+}
+
+.hero p{
+margin-top:15px;
+font-size:18px;
+}
+
+.profile{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #38bdf8;
+}
+
+h3{
+margin-bottom:20px;
+color:#38bdf8;
+font-size:28px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+background:#334155;
+}
+
+ul{
+list-style:none;
+}
+
+ul li{
+margin-bottom:10px;
+}
+
+footer{
+background:#020617;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+button{
+background:#38bdf8;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+margin-top:15px;
+font-weight:bold;
+}
+
+button:hover{
+background:#0ea5e9;
+}
+
+.contact a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>BHUWAN KHATRI</h1>
+
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+<h2>AI Mentor & Software Developer</h2>
+<p>
+Helping people learn technology and build modern software solutions.
+</p>
+
+<p><strong>Address:</strong> Okhaldhunga, Nepal</p>
+
+<button onclick="scrollToSection('contact')">Contact Me</button>
+</div>
+
+<img src="emage.png" class="profile">
+
+</section>
+
+
+<section id="about">
+
+<h3>About Me</h3>
+
+<p>
+I was born on 15 January 1999 in Okhaldhunga, Nepal. I have completed my Bachelor’s degree in BSc IT and I am currently working in the Information Technology sector. As a passionate and growth-driven IT professional, I am committed to continuous learning, problem-solving, and adopting emerging technologies to enhance my skills and professional impact.
+</p>
+
+</section>
+
+
+<section id="skills">
+
+<h3>Skills</h3>
+
+<div class="grid">
+
+<div class="card">Software Development</div>
+<div class="card">Security Systems</div>
+<div class="card">Graphics Design</div>
+<div class="card">iOS Tools</div>
+<div class="card">Android Tools</div>
+<div class="card">Web Design</div>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<h3>Achievements</h3>
+
+<div class="grid">
+
+<div class="card">
+<h4>ICT Award 2023</h4>
+</div>
+
+<div class="card">
+<h4>3+ Years Teaching</h4>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<h3>Core Values</h3>
+
+<div class="grid">
+
+<div class="card">Transparent</div>
+<div class="card">Truth - Driven</div>
+<div class="card">Collaborative</div>
+<div class="card">Unpretentious</div>
+<div class="card">Audacious</div>
+<div class="card">Growth - Oriented</div>
+
+</div>
+
+</section>
+
+
+
+<section id="services">
+
+<h3>My Services</h3>
+
+<div class="grid">
+
+<div class="card">
+<h4>AI Ready Training</h4>
+<p>Helping individuals and organizations learn AI tools and technologies.</p>
+</div>
+
+<div class="card">
+<h4>Software Development</h4>
+<p>Creating modern software solutions for real world problems.</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="contact">
+
+<h3>Contact</h3>
+
+<div class="contact">
+
+<p>Email: 
+<a href="mailto:binayparajuli945@gmail.com">
+binayparajuli945@gmail.com
+</a>
+</p>
+
+<p>Facebook: 
+<a href="http://www.facebook.com/P.bhuban" target="_blank">
+facebook.com/P.bhuban
+</a>
+</p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 BHUWAN KHATRI | Personal Website</p>
+
+</footer>
+
+
+<script>
+
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({
+behavior:'smooth'
+});
+}
+
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll',()=>{
+
+cards.forEach(card=>{
+
+const top = card.getBoundingClientRect().top;
+
+if(top < window.innerHeight - 50){
+card.style.opacity = 1;
+card.style.transform = "translateY(0px)";
+}
+
+});
+
+});
+
+cards.forEach(card=>{
+card.style.opacity=0;
+card.style.transform="translateY(30px)";
+card.style.transition="0.6s";
+});
+
+</script>
+
+</body>
+</html>
